@@ -25,7 +25,7 @@ dependencies {
 '''
 Cnave(this)
 Nave.getInstance(this.applicationContext)
-
+'''
 # Adding Layout
 ### To add the bottom navigation layout to your XML layout, follow these steps:
 
