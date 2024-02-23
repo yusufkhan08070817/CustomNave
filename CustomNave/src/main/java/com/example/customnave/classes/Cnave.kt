@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageButton
 import android.widget.RelativeLayout
+import androidx.cardview.widget.CardView
 import com.example.customnave.R
 
 
@@ -41,8 +42,9 @@ class Cnave @JvmOverloads constructor(
         val img3: ImageButton = findViewById(R.id.img3)
         val img4: ImageButton = findViewById(R.id.img4)
         val img5: ImageButton = findViewById(R.id.img5)
-        val ball: View = findViewById(R.id.floatingboll)
+        val ball: RelativeLayout = findViewById(R.id.floatingboll)
         val naveicon: RelativeLayout = findViewById(R.id.naveicon)
+        val navecard: CardView =findViewById(R.id.navecard)
 
         img1.setOnClickListener {
             NaveBack.init(it, ball, naveicon)
@@ -70,7 +72,7 @@ state.state.value=1
             listener?.onItemClicked(R.id.img5)
             state.state.value=5
         }
-naveobj.naveobj=navedata(img1,img2,img3,img4,img5)
+        naveobj.naveobj=navedata(img1,img2,img3,img4,img5,ball,navecard)
 
     }
 
